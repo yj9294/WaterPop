@@ -1,0 +1,581 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C706F5FA2B67C9CF0009111B /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C706F5F92B67C9CF0009111B /* BaseVC.swift */; };
+		C706F5FC2B67CB1E0009111B /* LoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C706F5FB2B67CB1E0009111B /* LoadingVC.swift */; };
+		C706F5FE2B67CB430009111B /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C706F5FD2B67CB430009111B /* HomeVC.swift */; };
+		C706F6012B67CD200009111B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C706F6002B67CD200009111B /* SnapKit */; };
+		C706F6042B67CEDF0009111B /* AppUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C706F6032B67CEDF0009111B /* AppUtil.swift */; };
+		C706F6062B67CEEA0009111B /* CacheUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C706F6052B67CEEA0009111B /* CacheUtil.swift */; };
+		C706F60A2B688AC40009111B /* DrinkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C706F6092B688AC40009111B /* DrinkVC.swift */; };
+		C706F60C2B688ACD0009111B /* ChartsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C706F60B2B688ACD0009111B /* ChartsVC.swift */; };
+		C706F60E2B688AD50009111B /* MedalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C706F60D2B688AD50009111B /* MedalVC.swift */; };
+		C706F6102B688ADD0009111B /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C706F60F2B688ADD0009111B /* SettingVC.swift */; };
+		C706F6122B688BAD0009111B /* HomeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C706F6112B688BAD0009111B /* HomeData.swift */; };
+		C77E11752B6B361A00EF3725 /* ReminderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77E11742B6B361A00EF3725 /* ReminderVC.swift */; };
+		C77E11772B6B3C1D00EF3725 /* ReminderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77E11762B6B3C1D00EF3725 /* ReminderData.swift */; };
+		C77E11792B6B3F9800EF3725 /* ReminderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77E11782B6B3F9800EF3725 /* ReminderCell.swift */; };
+		C77E117B2B6B477200EF3725 /* NotificationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77E117A2B6B477200EF3725 /* NotificationUtil.swift */; };
+		C77E117D2B6B4FAC00EF3725 /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77E117C2B6B4FAC00EF3725 /* TimeView.swift */; };
+		C77E117F2B6B782F00EF3725 /* TipDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77E117E2B6B782F00EF3725 /* TipDetailVC.swift */; };
+		C77E11812B6B7A4600EF3725 /* PrivacyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77E11802B6B7A4600EF3725 /* PrivacyVC.swift */; };
+		C78F32112B68E7C300821AE5 /* WaterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78F32102B68E7C300821AE5 /* WaterData.swift */; };
+		C78F32132B68ECB700821AE5 /* GoalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78F32122B68ECB700821AE5 /* GoalVC.swift */; };
+		C78F32152B68FDBD00821AE5 /* WaterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78F32142B68FDBD00821AE5 /* WaterVC.swift */; };
+		C78F32172B69045200821AE5 /* WaterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78F32162B69045200821AE5 /* WaterCell.swift */; };
+		C7949AEC2B69F628007A10B3 /* ChartsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7949AEB2B69F628007A10B3 /* ChartsData.swift */; };
+		C7949AEE2B6A1A80007A10B3 /* ChartLeftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7949AED2B6A1A80007A10B3 /* ChartLeftCell.swift */; };
+		C7949AF02B6A2082007A10B3 /* ChartsRightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7949AEF2B6A2082007A10B3 /* ChartsRightCell.swift */; };
+		C7949AF22B6A32ED007A10B3 /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7949AF12B6A32ED007A10B3 /* HistoryVC.swift */; };
+		C7949AF42B6A3972007A10B3 /* HistoryDateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7949AF32B6A3972007A10B3 /* HistoryDateCell.swift */; };
+		C7949AF62B6A4C2D007A10B3 /* MedalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7949AF52B6A4C2D007A10B3 /* MedalCell.swift */; };
+		C7949AF82B6A4CF9007A10B3 /* MedalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7949AF72B6A4CF9007A10B3 /* MedalData.swift */; };
+		C7949AFA2B6A6C19007A10B3 /* SettingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7949AF92B6A6C19007A10B3 /* SettingData.swift */; };
+		C7949AFC2B6A6E53007A10B3 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7949AFB2B6A6E53007A10B3 /* SettingCell.swift */; };
+		C7949AFE2B6A6E5C007A10B3 /* SettingTipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7949AFD2B6A6E5C007A10B3 /* SettingTipCell.swift */; };
+		C7B5B44E2B67C14E00489CD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5B44D2B67C14E00489CD2 /* AppDelegate.swift */; };
+		C7B5B4522B67C14E00489CD2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5B4512B67C14E00489CD2 /* ViewController.swift */; };
+		C7B5B4692B67C19000489CD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7B5B4632B67C18700489CD2 /* Assets.xcassets */; };
+		C7B5B46A2B67C19000489CD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7B5B4642B67C18700489CD2 /* LaunchScreen.storyboard */; };
+		C7B5B46B2B67C19000489CD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7B5B4662B67C18700489CD2 /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C706F5F92B67C9CF0009111B /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		C706F5FB2B67CB1E0009111B /* LoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingVC.swift; sourceTree = "<group>"; };
+		C706F5FD2B67CB430009111B /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		C706F6032B67CEDF0009111B /* AppUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtil.swift; sourceTree = "<group>"; };
+		C706F6052B67CEEA0009111B /* CacheUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheUtil.swift; sourceTree = "<group>"; };
+		C706F6072B67D3660009111B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C706F6092B688AC40009111B /* DrinkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkVC.swift; sourceTree = "<group>"; };
+		C706F60B2B688ACD0009111B /* ChartsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsVC.swift; sourceTree = "<group>"; };
+		C706F60D2B688AD50009111B /* MedalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedalVC.swift; sourceTree = "<group>"; };
+		C706F60F2B688ADD0009111B /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
+		C706F6112B688BAD0009111B /* HomeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeData.swift; sourceTree = "<group>"; };
+		C77E11742B6B361A00EF3725 /* ReminderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderVC.swift; sourceTree = "<group>"; };
+		C77E11762B6B3C1D00EF3725 /* ReminderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderData.swift; sourceTree = "<group>"; };
+		C77E11782B6B3F9800EF3725 /* ReminderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderCell.swift; sourceTree = "<group>"; };
+		C77E117A2B6B477200EF3725 /* NotificationUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationUtil.swift; sourceTree = "<group>"; };
+		C77E117C2B6B4FAC00EF3725 /* TimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeView.swift; sourceTree = "<group>"; };
+		C77E117E2B6B782F00EF3725 /* TipDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipDetailVC.swift; sourceTree = "<group>"; };
+		C77E11802B6B7A4600EF3725 /* PrivacyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyVC.swift; sourceTree = "<group>"; };
+		C78F32102B68E7C300821AE5 /* WaterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterData.swift; sourceTree = "<group>"; };
+		C78F32122B68ECB700821AE5 /* GoalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalVC.swift; sourceTree = "<group>"; };
+		C78F32142B68FDBD00821AE5 /* WaterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterVC.swift; sourceTree = "<group>"; };
+		C78F32162B69045200821AE5 /* WaterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterCell.swift; sourceTree = "<group>"; };
+		C7949AEB2B69F628007A10B3 /* ChartsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsData.swift; sourceTree = "<group>"; };
+		C7949AED2B6A1A80007A10B3 /* ChartLeftCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartLeftCell.swift; sourceTree = "<group>"; };
+		C7949AEF2B6A2082007A10B3 /* ChartsRightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsRightCell.swift; sourceTree = "<group>"; };
+		C7949AF12B6A32ED007A10B3 /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
+		C7949AF32B6A3972007A10B3 /* HistoryDateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDateCell.swift; sourceTree = "<group>"; };
+		C7949AF52B6A4C2D007A10B3 /* MedalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedalCell.swift; sourceTree = "<group>"; };
+		C7949AF72B6A4CF9007A10B3 /* MedalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedalData.swift; sourceTree = "<group>"; };
+		C7949AF92B6A6C19007A10B3 /* SettingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingData.swift; sourceTree = "<group>"; };
+		C7949AFB2B6A6E53007A10B3 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
+		C7949AFD2B6A6E5C007A10B3 /* SettingTipCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTipCell.swift; sourceTree = "<group>"; };
+		C7B5B44A2B67C14E00489CD2 /* WaterPop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaterPop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7B5B44D2B67C14E00489CD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C7B5B4512B67C14E00489CD2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C7B5B4632B67C18700489CD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C7B5B4652B67C18700489CD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C7B5B4672B67C18700489CD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C7B5B4472B67C14E00489CD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C706F6012B67CD200009111B /* SnapKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C706F6022B67CEC20009111B /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				C706F6032B67CEDF0009111B /* AppUtil.swift */,
+				C706F6052B67CEEA0009111B /* CacheUtil.swift */,
+				C77E117A2B6B477200EF3725 /* NotificationUtil.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		C7B5B4412B67C14E00489CD2 = {
+			isa = PBXGroup;
+			children = (
+				C7B5B44C2B67C14E00489CD2 /* WaterPop */,
+				C7B5B44B2B67C14E00489CD2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C7B5B44B2B67C14E00489CD2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C7B5B44A2B67C14E00489CD2 /* WaterPop.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C7B5B44C2B67C14E00489CD2 /* WaterPop */ = {
+			isa = PBXGroup;
+			children = (
+				C706F6072B67D3660009111B /* Info.plist */,
+				C7B5B4622B67C18700489CD2 /* Resource */,
+				C7B5B4612B67C16100489CD2 /* AppContainer */,
+				C7B5B46D2B67C2CB00489CD2 /* Modual */,
+			);
+			path = WaterPop;
+			sourceTree = "<group>";
+		};
+		C7B5B4612B67C16100489CD2 /* AppContainer */ = {
+			isa = PBXGroup;
+			children = (
+				C7B5B44D2B67C14E00489CD2 /* AppDelegate.swift */,
+				C7B5B4512B67C14E00489CD2 /* ViewController.swift */,
+			);
+			path = AppContainer;
+			sourceTree = "<group>";
+		};
+		C7B5B4622B67C18700489CD2 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				C7B5B4632B67C18700489CD2 /* Assets.xcassets */,
+				C7B5B4642B67C18700489CD2 /* LaunchScreen.storyboard */,
+				C7B5B4662B67C18700489CD2 /* Main.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		C7B5B46D2B67C2CB00489CD2 /* Modual */ = {
+			isa = PBXGroup;
+			children = (
+				C706F6022B67CEC20009111B /* Util */,
+				C7B5B46E2B67C2CB00489CD2 /* View */,
+				C7B5B46F2B67C2CB00489CD2 /* ViewController */,
+				C7B5B4702B67C2CB00489CD2 /* Data */,
+			);
+			path = Modual;
+			sourceTree = "<group>";
+		};
+		C7B5B46E2B67C2CB00489CD2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C78F32162B69045200821AE5 /* WaterCell.swift */,
+				C7949AED2B6A1A80007A10B3 /* ChartLeftCell.swift */,
+				C7949AEF2B6A2082007A10B3 /* ChartsRightCell.swift */,
+				C7949AF32B6A3972007A10B3 /* HistoryDateCell.swift */,
+				C7949AF52B6A4C2D007A10B3 /* MedalCell.swift */,
+				C7949AFB2B6A6E53007A10B3 /* SettingCell.swift */,
+				C7949AFD2B6A6E5C007A10B3 /* SettingTipCell.swift */,
+				C77E11782B6B3F9800EF3725 /* ReminderCell.swift */,
+				C77E117C2B6B4FAC00EF3725 /* TimeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C7B5B46F2B67C2CB00489CD2 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C706F5F92B67C9CF0009111B /* BaseVC.swift */,
+				C706F5FB2B67CB1E0009111B /* LoadingVC.swift */,
+				C706F5FD2B67CB430009111B /* HomeVC.swift */,
+				C706F6092B688AC40009111B /* DrinkVC.swift */,
+				C78F32122B68ECB700821AE5 /* GoalVC.swift */,
+				C78F32142B68FDBD00821AE5 /* WaterVC.swift */,
+				C706F60B2B688ACD0009111B /* ChartsVC.swift */,
+				C706F60D2B688AD50009111B /* MedalVC.swift */,
+				C706F60F2B688ADD0009111B /* SettingVC.swift */,
+				C7949AF12B6A32ED007A10B3 /* HistoryVC.swift */,
+				C77E11742B6B361A00EF3725 /* ReminderVC.swift */,
+				C77E117E2B6B782F00EF3725 /* TipDetailVC.swift */,
+				C77E11802B6B7A4600EF3725 /* PrivacyVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		C7B5B4702B67C2CB00489CD2 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C706F6112B688BAD0009111B /* HomeData.swift */,
+				C78F32102B68E7C300821AE5 /* WaterData.swift */,
+				C7949AF72B6A4CF9007A10B3 /* MedalData.swift */,
+				C7949AEB2B69F628007A10B3 /* ChartsData.swift */,
+				C7949AF92B6A6C19007A10B3 /* SettingData.swift */,
+				C77E11762B6B3C1D00EF3725 /* ReminderData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C7B5B4492B67C14E00489CD2 /* WaterPop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7B5B45E2B67C15000489CD2 /* Build configuration list for PBXNativeTarget "WaterPop" */;
+			buildPhases = (
+				C7B5B4462B67C14E00489CD2 /* Sources */,
+				C7B5B4472B67C14E00489CD2 /* Frameworks */,
+				C7B5B4482B67C14E00489CD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WaterPop;
+			packageProductDependencies = (
+				C706F6002B67CD200009111B /* SnapKit */,
+			);
+			productName = WaterPop;
+			productReference = C7B5B44A2B67C14E00489CD2 /* WaterPop.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C7B5B4422B67C14E00489CD2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					C7B5B4492B67C14E00489CD2 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+				};
+			};
+			buildConfigurationList = C7B5B4452B67C14E00489CD2 /* Build configuration list for PBXProject "WaterPop" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C7B5B4412B67C14E00489CD2;
+			packageReferences = (
+				C706F5FF2B67CD200009111B /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
+			productRefGroup = C7B5B44B2B67C14E00489CD2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C7B5B4492B67C14E00489CD2 /* WaterPop */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C7B5B4482B67C14E00489CD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7B5B46B2B67C19000489CD2 /* Main.storyboard in Resources */,
+				C7B5B46A2B67C19000489CD2 /* LaunchScreen.storyboard in Resources */,
+				C7B5B4692B67C19000489CD2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C7B5B4462B67C14E00489CD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7B5B4522B67C14E00489CD2 /* ViewController.swift in Sources */,
+				C7949AF22B6A32ED007A10B3 /* HistoryVC.swift in Sources */,
+				C78F32132B68ECB700821AE5 /* GoalVC.swift in Sources */,
+				C77E11752B6B361A00EF3725 /* ReminderVC.swift in Sources */,
+				C77E11812B6B7A4600EF3725 /* PrivacyVC.swift in Sources */,
+				C706F60A2B688AC40009111B /* DrinkVC.swift in Sources */,
+				C77E117F2B6B782F00EF3725 /* TipDetailVC.swift in Sources */,
+				C77E11792B6B3F9800EF3725 /* ReminderCell.swift in Sources */,
+				C7949AFA2B6A6C19007A10B3 /* SettingData.swift in Sources */,
+				C7B5B44E2B67C14E00489CD2 /* AppDelegate.swift in Sources */,
+				C706F6042B67CEDF0009111B /* AppUtil.swift in Sources */,
+				C706F60C2B688ACD0009111B /* ChartsVC.swift in Sources */,
+				C706F6062B67CEEA0009111B /* CacheUtil.swift in Sources */,
+				C706F5FE2B67CB430009111B /* HomeVC.swift in Sources */,
+				C7949AF82B6A4CF9007A10B3 /* MedalData.swift in Sources */,
+				C706F6102B688ADD0009111B /* SettingVC.swift in Sources */,
+				C77E117D2B6B4FAC00EF3725 /* TimeView.swift in Sources */,
+				C706F6122B688BAD0009111B /* HomeData.swift in Sources */,
+				C706F5FA2B67C9CF0009111B /* BaseVC.swift in Sources */,
+				C7949AEE2B6A1A80007A10B3 /* ChartLeftCell.swift in Sources */,
+				C706F60E2B688AD50009111B /* MedalVC.swift in Sources */,
+				C77E11772B6B3C1D00EF3725 /* ReminderData.swift in Sources */,
+				C7949AF02B6A2082007A10B3 /* ChartsRightCell.swift in Sources */,
+				C77E117B2B6B477200EF3725 /* NotificationUtil.swift in Sources */,
+				C7949AF62B6A4C2D007A10B3 /* MedalCell.swift in Sources */,
+				C7949AFC2B6A6E53007A10B3 /* SettingCell.swift in Sources */,
+				C78F32152B68FDBD00821AE5 /* WaterVC.swift in Sources */,
+				C7949AF42B6A3972007A10B3 /* HistoryDateCell.swift in Sources */,
+				C78F32172B69045200821AE5 /* WaterCell.swift in Sources */,
+				C7949AEC2B69F628007A10B3 /* ChartsData.swift in Sources */,
+				C706F5FC2B67CB1E0009111B /* LoadingVC.swift in Sources */,
+				C7949AFE2B6A6E5C007A10B3 /* SettingTipCell.swift in Sources */,
+				C78F32112B68E7C300821AE5 /* WaterData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C7B5B4642B67C18700489CD2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7B5B4652B67C18700489CD2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C7B5B4662B67C18700489CD2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7B5B4672B67C18700489CD2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C7B5B45C2B67C15000489CD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C7B5B45D2B67C15000489CD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C7B5B45F2B67C15000489CD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 20240208;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WaterPop/Info.plist;
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Please allow access to your activity tracking to provide personalized push services and reduce interference caused by irrelevant services.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.repaydrink.popwater.real;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		C7B5B4602B67C15000489CD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 20240208;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WaterPop/Info.plist;
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Please allow access to your activity tracking to provide personalized push services and reduce interference caused by irrelevant services.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.repaydrink.popwater.real;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C7B5B4452B67C14E00489CD2 /* Build configuration list for PBXProject "WaterPop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7B5B45C2B67C15000489CD2 /* Debug */,
+				C7B5B45D2B67C15000489CD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7B5B45E2B67C15000489CD2 /* Build configuration list for PBXNativeTarget "WaterPop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7B5B45F2B67C15000489CD2 /* Debug */,
+				C7B5B4602B67C15000489CD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C706F5FF2B67CD200009111B /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C706F6002B67CD200009111B /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C706F5FF2B67CD200009111B /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = C7B5B4422B67C14E00489CD2 /* Project object */;
+}
