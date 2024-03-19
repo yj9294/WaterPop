@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GADUtil
 
 class DrinkVC: BaseVC {
     
@@ -32,21 +33,51 @@ class DrinkVC: BaseVC {
         progressLabel.textAlignment = .center
         return progressLabel
     }()
+    
+    private var willAppear = false
+    private var impressDate = Date().addingTimeInterval(-11)
+    private lazy var adView: GADNativeView = {
+        let adView = GADNativeView(.small)
+        return adView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(nativeADLoad), name: .nativeUpdate, object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        willAppear = true
         navigationItem.titleView = UIImageView(image: UIImage(named: "drink_title"))
         startProgressView(progressView: progressBackgroundView)
         loadData()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            GADUtil.share.disappear(.native)
+            GADUtil.share.load(.native)
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        willAppear = false
+        GADUtil.share.disappear(.native)
         stopProgressView(progressView: progressBackgroundView)
+    }
+    
+    @objc func nativeADLoad(noti: Notification) {
+        if let ad = noti.object as? GADNativeModel {
+            if willAppear {
+                if  Date().timeIntervalSince1970 - impressDate.timeIntervalSince1970 > 10 {
+                    adView.nativeAd = ad.nativeAd
+                    impressDate = Date()
+                    return
+                } else {
+                    NSLog("[ad] (native) 10显示间隔 drink")
+                }
+            }
+        }
+        adView.nativeAd = nil
     }
 
 }
@@ -147,7 +178,7 @@ extension DrinkVC {
         view.addSubview(progressView)
         progressView.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(buttonView.snp.bottom).offset(46)
+            make.top.equalTo(buttonView.snp.bottom).offset(20)
         }
         
         progressView.addSubview(progressBackgroundView)
@@ -158,6 +189,14 @@ extension DrinkVC {
         progressView.addSubview(progressLabel)
         progressLabel.snp.makeConstraints { make in
             make.centerX.centerY.equalToSuperview()
+        }
+        
+        view.addSubview(adView)
+        adView.snp.makeConstraints { make in
+            make.top.equalTo(progressView.snp.bottom).offset(10)
+            make.left.equalToSuperview().offset(20)
+            make.right.equalToSuperview().offset(-20)
+            make.height.equalTo(124)
         }
     }
     
@@ -192,8 +231,11 @@ extension DrinkVC {
     }
     
     @objc func gotoGoalVC() {
-        let vc = GoalVC()
-        vc.hidesBottomBarWhenPushed = true
-        navigationController?.pushViewController(vc, animated: true)
+        GADUtil.share.load(.interstitial)
+        GADUtil.share.show(.interstitial) { _ in
+            let vc = GoalVC()
+            vc.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }

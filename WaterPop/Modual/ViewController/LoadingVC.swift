@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GADUtil
 
 class LoadingVC: BaseVC {
     
@@ -26,7 +27,7 @@ class LoadingVC: BaseVC {
         }
     }
     
-    private let duration = 2.45
+    private var duration = 12.45
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,14 +73,26 @@ extension LoadingVC {
     public func startLoading() {
         timer?.invalidate()
         progress = 0.0
+        duration = 12.45
         timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true, block: { [weak self] timer in
             guard let self = self else { return }
             self.progress = self.progress + 0.01 / self.duration
             if self.progress > 1.0 {
                 self.progress = 1.0
                 timer.invalidate()
-                NotificationCenter.default.post(name: .applicationHome, object: nil)
+                GADUtil.share.show(.open) { _ in
+                    if self.progress == 1.0 {
+                        NotificationCenter.default.post(name: .applicationHome, object: nil)
+                    }
+                }
+            }
+            
+            if self.progress > 0.3, GADUtil.share.isLoaded(.open) {
+                self.duration = 0.5
             }
         })
+        GADUtil.share.load(.open)
+        GADUtil.share.load(.native)
+        GADUtil.share.load(.interstitial)
     }
 }

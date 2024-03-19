@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GADUtil
 
 class WaterVC: BaseVC {
     
@@ -229,9 +230,14 @@ extension WaterVC: UITextFieldDelegate {
         if ml == 0 || name.isEmpty {
             return
         }
-        let goal = CacheUtil.shared.goal
-        let model = WaterModel(date: Date(), item: item, name: name, ml: ml, goal: goal)
-        CacheUtil.shared.drinks.insert(model, at: 0)
-        navigationController?.popViewController(animated: true)
+        GADUtil.share.load(.interstitial)
+        GADUtil.share.show(.interstitial) { _ in
+            let goal = CacheUtil.shared.goal
+            let model = WaterModel(date: Date(), item: self.item, name: self.name, ml: self.ml, goal: goal)
+            CacheUtil.shared.drinks.insert(model, at: 0)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
     }
 }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GADUtil
 
 class ChartsVC: BaseVC {
     
@@ -34,6 +35,17 @@ class ChartsVC: BaseVC {
     let numbers = [3000, 2500, 2000, 1500, 1000, 500, 0]
     
     private var drinks: [WaterModel] { CacheUtil.shared.drinks }
+    
+    private var willAppear = false
+    private var impressDate = Date().addingTimeInterval(-11)
+    private lazy var adView: GADNativeView = {
+        if UIScreen.main.bounds.width > 375 {
+            let adView = GADNativeView(.big)
+            return adView
+        }
+        let adView = GADNativeView(.small)
+        return adView
+    }()
     
     private var item: ChartsItem = .day {
         didSet {
@@ -151,19 +163,46 @@ class ChartsVC: BaseVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(nativeADLoad), name: .nativeUpdate, object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        willAppear = true
         navigationItem.titleView = UIImageView(image: UIImage(named: "charts_title"))
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "charts_history")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(gotoHistory))
         loadData()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            GADUtil.share.disappear(.native)
+            GADUtil.share.load(.native)
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        willAppear = false
+        GADUtil.share.disappear(.native)
     }
     
     @objc func gotoHistory() {
         let vc = HistoryVC()
         vc.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc func nativeADLoad(noti: Notification) {
+        if let ad = noti.object as? GADNativeModel {
+            if willAppear {
+                if  Date().timeIntervalSince1970 - impressDate.timeIntervalSince1970 > 10 {
+                    adView.nativeAd = ad.nativeAd
+                    impressDate = Date()
+                    return
+                } else {
+                    NSLog("[ad] (native) 10显示间隔 charts")
+                }
+            }
+        }
+        adView.nativeAd = nil
     }
 }
 
@@ -263,6 +302,14 @@ extension ChartsVC {
             make.left.equalTo(leftView.snp.right).offset(10)
             make.right.equalToSuperview()
             make.height.equalTo((numbers.count - 1) * 44 + 27)
+        }
+        
+        view.addSubview(adView)
+        adView.snp.makeConstraints { make in
+            make.bottom.equalTo(view.snp.bottomMargin).offset(-10)
+            make.left.equalToSuperview().offset(20)
+            make.right.equalToSuperview().offset(-20)
+            make.height.equalTo(124)
         }
         
     }

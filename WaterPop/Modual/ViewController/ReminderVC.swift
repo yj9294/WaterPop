@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GADUtil
 
 class ReminderVC: BaseVC {
     
@@ -32,9 +33,23 @@ class ReminderVC: BaseVC {
         weekButton.isSelected = weekMode
         return weekButton
     }()
+    
+    private var willAppear = false
+    
+    @FileHelper(.impressReminder, default: Date().addingTimeInterval(-11))
+    private var impressDate: Date
+    private lazy var adView: GADNativeView = {
+        if UIScreen.main.bounds.width > 375 {
+            let adView = GADNativeView(.big)
+            return adView
+        }
+        let adView = GADNativeView(.small)
+        return adView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(nativeADLoad), name: .nativeUpdate, object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,6 +57,15 @@ class ReminderVC: BaseVC {
         navigationItem.titleView = UIImageView(image: UIImage(named: "reminder_title"))
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "add_new"), style: .plain, target: self, action: #selector(newReminder))
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "back")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(back))
+        willAppear = true
+        GADUtil.share.disappear(.native)
+        GADUtil.share.load(.native)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        willAppear = false
+        GADUtil.share.disappear(.native)
     }
     
     @objc func newReminder() {
@@ -67,6 +91,20 @@ class ReminderVC: BaseVC {
         loadData()
     }
 
+    @objc func nativeADLoad(noti: Notification) {
+        if let ad = noti.object as? GADNativeModel {
+            if willAppear {
+                if  Date().timeIntervalSince1970 - impressDate.timeIntervalSince1970 > 10 {
+                    adView.nativeAd = ad.nativeAd
+                    impressDate = Date()
+                    return
+                } else {
+                    NSLog("[ad] (native) 10显示间隔 reminder")
+                }
+            }
+        }
+        adView.nativeAd = nil
+    }
 }
 
 extension ReminderVC {
@@ -136,7 +174,16 @@ extension ReminderVC {
             make.top.equalTo(reminderTitle.snp.bottom).offset(20)
             make.left.equalToSuperview().offset(20)
             make.right.equalToSuperview().offset(-20)
-            make.bottom.equalToSuperview().offset(-20)
+        }
+        
+        
+        view.addSubview(adView)
+        adView.snp.makeConstraints { make in
+            make.top.equalTo(reminderView.snp.bottom).offset(20)
+            make.left.equalToSuperview().offset(20)
+            make.right.equalToSuperview().offset(-20)
+            make.height.equalTo(124)
+            make.bottom.equalTo(view.snp.bottom).offset(-20)
         }
     }
     

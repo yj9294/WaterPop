@@ -126,7 +126,7 @@ struct FileHelper<T: Codable> {
     }
     
     enum Key: String {
-        case drinks, goal, reminders, week
+        case drinks, goal, reminders, week, impressReminder
     }
 }
 

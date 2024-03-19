@@ -6,24 +6,54 @@
 //
 
 import UIKit
+import GADUtil
+import FBSDKCoreKit
 
-@main
+@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        ApplicationDelegate.shared.application( application, didFinishLaunchingWithOptions: launchOptions)
         addLoadingLife()
         NotificationUtil.shared.register()
         NotificationCenter.default.post(name: .applicationLoading, object: nil)
+        GADUtil.share.requestConfig()
         return true
     }
     
     func applicationWillEnterForeground(_ application: UIApplication) {
         NotificationCenter.default.post(name: .applicationLoading, object: nil)
+        if let windowScene = UIApplication.shared.connectedScenes.filter({$0 is UIWindowScene}).first as? UIWindowScene, let vc = windowScene.keyWindow?.rootViewController {
+            if let presentedVC = vc.presentedViewController {
+                if let vcc = presentedVC.presentedViewController {
+                    vcc.dismiss(animated: true) {
+                        presentedVC.dismiss(animated: true)
+                    }
+                } else {
+                    presentedVC.dismiss(animated: true)
+                }
+            }
+        }
     }
     
+    func applicationDidEnterBackground(_ application: UIApplication) {
+    }
+    
+    func application(
+            _ app: UIApplication,
+            open url: URL,
+            options: [UIApplication.OpenURLOptionsKey : Any] = [:]
+        ) -> Bool {
+            ApplicationDelegate.shared.application(
+                app,
+                open: url,
+                sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
+                annotation: options[UIApplication.OpenURLOptionsKey.annotation]
+            )
+        }
 }
 
 extension AppDelegate {
