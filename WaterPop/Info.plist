@@ -23,5 +23,9 @@
 	<true/>
 	<key>GADNativeAdValidatorEnabled</key>
 	<false/>
+	<key>FacebookAutoLogAppEventsEnabled</key>
+	<true/>
+	<key>FacebookAdvertiserIDCollectionEnabled</key>
+	<true/>
 </dict>
 </plist>

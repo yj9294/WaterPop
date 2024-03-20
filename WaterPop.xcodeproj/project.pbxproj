@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BFE291432BA808EB00B90F33 /* GADUtil in Frameworks */ = {isa = PBXBuildFile; productRef = BFE291422BA808EB00B90F33 /* GADUtil */; };
+		2555A8A92BAAE580007387B1 /* GADUtil in Frameworks */ = {isa = PBXBuildFile; productRef = 2555A8A82BAAE580007387B1 /* GADUtil */; };
 		BFE291452BA80A7600B90F33 /* GADConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = BFE291442BA80A7600B90F33 /* GADConfig.json */; };
 		BFE291472BA8176000B90F33 /* GADNativeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE291462BA8176000B90F33 /* GADNativeView.swift */; };
 		BFE291542BA962BC00B90F33 /* FacebookAEM in Frameworks */ = {isa = PBXBuildFile; productRef = BFE291532BA962BC00B90F33 /* FacebookAEM */; };
@@ -101,10 +101,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFE291542BA962BC00B90F33 /* FacebookAEM in Frameworks */,
+				2555A8A92BAAE580007387B1 /* GADUtil in Frameworks */,
 				BFE291582BA962BC00B90F33 /* FacebookCore in Frameworks */,
 				BFE291562BA962BC00B90F33 /* FacebookBasics in Frameworks */,
 				C706F6012B67CD200009111B /* SnapKit in Frameworks */,
-				BFE291432BA808EB00B90F33 /* GADUtil in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,10 +247,10 @@
 			name = WaterPop;
 			packageProductDependencies = (
 				C706F6002B67CD200009111B /* SnapKit */,
-				BFE291422BA808EB00B90F33 /* GADUtil */,
 				BFE291532BA962BC00B90F33 /* FacebookAEM */,
 				BFE291552BA962BC00B90F33 /* FacebookBasics */,
 				BFE291572BA962BC00B90F33 /* FacebookCore */,
+				2555A8A82BAAE580007387B1 /* GADUtil */,
 			);
 			productName = WaterPop;
 			productReference = C7B5B44A2B67C14E00489CD2 /* WaterPop.app */;
@@ -282,8 +282,8 @@
 			mainGroup = C7B5B4412B67C14E00489CD2;
 			packageReferences = (
 				C706F5FF2B67CD200009111B /* XCRemoteSwiftPackageReference "SnapKit" */,
-				BFE291412BA808EB00B90F33 /* XCRemoteSwiftPackageReference "gadutil" */,
 				BFE291522BA962BC00B90F33 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+				2555A8A72BAAE580007387B1 /* XCRemoteSwiftPackageReference "gadutil" */,
 			);
 			productRefGroup = C7B5B44B2B67C14E00489CD2 /* Products */;
 			projectDirPath = "";
@@ -498,7 +498,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20240319;
+				CURRENT_PROJECT_VERSION = 20240320;
 				DEVELOPMENT_TEAM = N8PC5C6FYT;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WaterPop/Info.plist;
@@ -513,7 +513,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.repaydrink.popwater.real;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -532,7 +532,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20240319;
+				CURRENT_PROJECT_VERSION = 20240320;
 				DEVELOPMENT_TEAM = N8PC5C6FYT;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WaterPop/Info.plist;
@@ -547,7 +547,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.repaydrink.popwater.real;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -583,7 +583,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		BFE291412BA808EB00B90F33 /* XCRemoteSwiftPackageReference "gadutil" */ = {
+		2555A8A72BAAE580007387B1 /* XCRemoteSwiftPackageReference "gadutil" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/yj9294/gadutil.git";
 			requirement = {
@@ -610,9 +610,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		BFE291422BA808EB00B90F33 /* GADUtil */ = {
+		2555A8A82BAAE580007387B1 /* GADUtil */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = BFE291412BA808EB00B90F33 /* XCRemoteSwiftPackageReference "gadutil" */;
+			package = 2555A8A72BAAE580007387B1 /* XCRemoteSwiftPackageReference "gadutil" */;
 			productName = GADUtil;
 		};
 		BFE291532BA962BC00B90F33 /* FacebookAEM */ = {
