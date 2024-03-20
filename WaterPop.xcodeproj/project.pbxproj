@@ -497,9 +497,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 20240208;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 20240319;
+				DEVELOPMENT_TEAM = N8PC5C6FYT;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WaterPop/Info.plist;
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Please allow access to your activity tracking to provide personalized push services and reduce interference caused by irrelevant services.";
@@ -513,8 +513,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.waterpop.ios.promax;
+				MARKETING_VERSION = 1.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.repaydrink.popwater.real;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -531,9 +531,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 20240208;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 20240319;
+				DEVELOPMENT_TEAM = N8PC5C6FYT;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WaterPop/Info.plist;
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Please allow access to your activity tracking to provide personalized push services and reduce interference caused by irrelevant services.";
@@ -547,8 +547,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.waterpop.ios.promax;
+				MARKETING_VERSION = 1.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.repaydrink.popwater.real;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
